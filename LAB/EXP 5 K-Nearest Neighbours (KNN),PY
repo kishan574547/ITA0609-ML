@@ -1,0 +1,29 @@
+from sklearn.neighbors import KNeighborsClassifier
+
+X = [
+    [2, 4],
+    [4, 4],
+    [4, 6],
+    [6, 2],
+    [6, 4],
+    [8, 4]
+]
+
+y = [
+    'A',
+    'A',
+    'A',
+    'B',
+    'B',
+    'B'
+]
+
+model = KNeighborsClassifier(n_neighbors=3)
+
+model.fit(X, y)
+
+sample = [[5, 5]]
+
+prediction = model.predict(sample)
+
+print("Prediction:", prediction[0])
